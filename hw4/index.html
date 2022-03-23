@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Homework 4</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Richard J. Tisinger"> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.js"></script>
+    <script src = scripts/script.js></script>
+
+    <style>
+        html {
+            text-align: center;
+            font-size: x-large;
+            background-color: coral;
+        }
+        footer {
+            font-size: small;
+        }
+    </style>
+
+     <!-- Pure CSS -->
+     <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css">
+
+</head>
+
+<body>
+    <br>
+    <!--Section for the encrypted passwords-->
+    <section>
+        <label for="passIn">Enter password to encode: </label>
+        <input type="text" id="passIn">
+        <button onclick="encrypt()">Encrypt</button>
+        <br><br>
+        <label for="encrypt1">AES Encryption: </label>
+        <p id="encrypt1"></p>
+        <br>
+        <label for="encrypt2">SHA1 Encryption: </label>
+        <p id="encrypt2"></p>
+        <br>
+        <label for="encrypt3">SHA 224 Encryption: </label>
+        <p id="encrypt3"></p>
+        <br>
+        <label for="encrypt4">SHA 256 Encryption: </label>
+        <p id="encrypt4"></p>
+
+    </section>
+    <!--Section for number conversions-->
+    <section>
+        <label for="binIn">Enter binary number to convert to decimal: </label>
+        <input type="number" id="binIn">
+        <br>
+        <label for="deciIn">Enter decimal number to convert to binary: </label>
+        <input type="number" id="deciIn">
+        <br>
+        <div class="pure-button-group" role="group">
+            <button class="pure-button" onclick="decimalToBinary()">Convert Decimal To Binary</button>
+            <button class="pure-button" onclick="binaryToDecimal()">Convert Binary To Decimal</button>
+        </div>
+        <p id="output" name="output"></p>
+    </section>
+    <br>
+    <footer id="foot">
+        Richard J Tisinger, March 2022, Dr. Lo's ITEC 225-01 at Radford University.
+    </footer>
+
+</body>
+
+</html>
